@@ -1,0 +1,564 @@
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  background: #fbf7ef;
+  border-bottom: 1px solid #e7ded2;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  width: min(1160px, calc(100% - 40px));
+  height: 78px;
+  margin: auto;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-width: 0;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+
+  color: #211c18;
+  text-decoration: none;
+
+  font-family: Georgia, serif;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+
+  white-space: nowrap;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.navbar-logo > span:last-child {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.logo-icon {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  background: #211c18;
+  color: #fff;
+
+  border-radius: 12px 6px 12px 6px;
+  font-size: 18px;
+
+  transform: rotate(-5deg);
+}
+
+.logo-icon i {
+  transform: rotate(5deg);
+}
+
+/* =========================
+   NAVIGATION LINKS
+========================= */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  min-width: 0;
+}
+
+.navbar-links a {
+  color: #6e645c;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: color 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: #b86b3d;
+}
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+
+  flex-shrink: 0;
+  min-width: 0;
+}
+
+.nav-icon-btn {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+
+  border: 1px solid #e7ded2;
+  border-radius: 50%;
+
+  background: #fffaf2;
+
+  display: grid;
+  place-items: center;
+
+  color: #211c18;
+  font-size: 16px;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.nav-icon-btn:hover {
+  background: #211c18;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   CART
+========================= */
+
+.cart-btn {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -3px;
+  right: -2px;
+
+  width: 16px;
+  height: 16px;
+
+  border-radius: 50%;
+
+  background: #b86b3d;
+  color: white;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  display: grid;
+  place-items: center;
+}
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.login-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  height: 40px;
+  padding: 0 16px;
+  flex-shrink: 0;
+
+  border: none;
+  border-radius: 11px;
+
+  background: #211c18;
+  color: #fff;
+
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.login-btn i {
+  font-size: 15px;
+}
+
+.login-btn:hover {
+  background: #b86b3d;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   WELCOME USER
+========================= */
+
+.welcome-user {
+  display: block;
+
+  color: #5b4636;
+  font-size: 14px;
+  font-weight: 600;
+
+  max-width: 140px;
+  min-width: 0;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* =========================
+   MOBILE MENU BUTTON
+========================= */
+
+.menu-btn {
+  display: none;
+
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+
+  border: 1px solid #e7ded2;
+  border-radius: 10px;
+
+  background: #fffaf2;
+  color: #211c18;
+
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Mobile login hidden by default */
+.mobile-login {
+  display: none;
+  font-family: inherit;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+  .navbar-container {
+    gap: 12px;
+  }
+
+  .navbar-links {
+    gap: 14px;
+  }
+
+  .navbar-links a {
+    font-size: 13px;
+  }
+
+  .navbar-logo {
+    font-size: 22px;
+    gap: 8px;
+  }
+
+  .navbar-actions {
+    gap: 7px;
+  }
+
+  .welcome-user {
+    max-width: 100px;
+    font-size: 12px;
+  }
+
+  .login-btn {
+    padding: 0 11px;
+  }
+}
+
+/* =========================
+   MOBILE NAVBAR
+========================= */
+
+@media (max-width: 700px) {
+  .navbar-container {
+    width: 100%;
+    height: 68px;
+    padding: 0 12px;
+    gap: 8px;
+  }
+
+  .navbar-logo {
+    font-size: 20px;
+    gap: 7px;
+  }
+
+  .logo-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  /* Dropdown navigation menu */
+  .navbar-links {
+    position: absolute;
+    top: 68px;
+    left: 12px;
+    right: 12px;
+
+    box-sizing: border-box;
+    width: auto;
+    max-width: calc(100% - 24px);
+
+    background: #fffdf8;
+    border: 1px solid #e7ded2;
+    border-radius: 16px;
+
+    padding: 14px;
+
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+
+    box-shadow: 0 15px 40px rgba(64, 45, 28, 0.12);
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links a {
+    display: block;
+    padding: 13px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    white-space: normal;
+  }
+
+  .navbar-links a:hover {
+    background: #f2eadc;
+  }
+
+  /* Login/logout inside mobile menu */
+  .mobile-login {
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 14px;
+    margin-top: 5px;
+
+    border-radius: 10px;
+    background: #211c18;
+    color: #fff !important;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  /* Hide desktop login/logout */
+  .navbar-actions .login-btn {
+    display: none;
+  }
+
+  /* Show hamburger */
+  .menu-btn {
+    display: grid;
+    place-items: center;
+
+    width: 36px;
+    height: 36px;
+    padding: 0;
+  }
+
+  .navbar-actions {
+    gap: 6px;
+  }
+
+  .welcome-user {
+    max-width: 75px;
+    font-size: 11px;
+  }
+
+  .nav-icon-btn {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 0 10px;
+    gap: 5px;
+  }
+
+  .navbar-logo {
+    font-size: 18px;
+    gap: 6px;
+  }
+
+  .logo-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .navbar-actions {
+    gap: 5px;
+  }
+
+  .welcome-user {
+    max-width: 65px;
+    font-size: 11px;
+  }
+
+  .nav-icon-btn,
+  .menu-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* Hide search on small screens */
+  .navbar-actions .nav-icon-btn:first-child {
+    display: none;
+  }
+
+  .navbar-links {
+    left: 10px;
+    right: 10px;
+    max-width: calc(100% - 20px);
+  }
+}
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media (max-width: 360px) {
+  .navbar-container {
+    padding: 0 7px;
+    gap: 4px;
+  }
+
+  .navbar-logo {
+    font-size: 16px;
+    gap: 5px;
+  }
+
+  .logo-icon {
+    width: 29px;
+    height: 29px;
+    font-size: 15px;
+  }
+
+  .navbar-actions {
+    gap: 4px;
+  }
+
+  .welcome-user {
+    max-width: 55px;
+    font-size: 10px;
+  }
+
+  .nav-icon-btn,
+  .menu-btn {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* =========================
+   LOGIN MODAL
+========================= */
+
+.bookhaven-login-dialog {
+  width: calc(100% - 24px);
+  max-width: 480px;
+  margin: 12px auto;
+}
+
+.bookhaven-login-dialog .modal-content {
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(33, 28, 24, 0.18);
+}
+
+.bookhaven-login-dialog .modal-header {
+  padding: 20px 24px;
+  background: #fbf7ef;
+  border-bottom: 1px solid #e7ded2;
+}
+
+.bookhaven-login-dialog .modal-title {
+  color: #211c18;
+  font-family: Georgia, serif;
+  font-weight: 700;
+}
+
+.bookhaven-login-dialog .modal-body {
+  padding: 24px;
+}
+
+.bookhaven-login-dialog .form-control {
+  min-height: 44px;
+  border-radius: 9px;
+}
+
+.bookhaven-login-dialog .btn-primary {
+  min-height: 45px;
+  border: none;
+  border-radius: 10px;
+  background: #211c18;
+}
+
+.bookhaven-login-dialog .btn-primary:hover {
+  background: #b86b3d;
+}
+
+@media (max-width: 480px) {
+  .bookhaven-login-dialog {
+    width: calc(100% - 20px);
+    margin: 10px auto;
+  }
+
+  .bookhaven-login-dialog .modal-header {
+    padding: 16px 18px;
+  }
+
+  .bookhaven-login-dialog .modal-body {
+    padding: 18px;
+  }
+}
+
+/* =========================
+   PREVENT HORIZONTAL OVERFLOW
+========================= */
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+* {
+  box-sizing: border-box;
+}
